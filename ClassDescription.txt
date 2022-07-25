@@ -1,0 +1,37 @@
+Class-6
+
+1. $data pass in blade file with {{ $data }} or {!! $data !!}
+	but
+	{!! !!} is not secure
+2. Component use aro short kora jay 		https://laravel.com/docs/9.x/blade#components
+	
+	Component file:
+	<div class="alert alert-danger">
+		<div class="alert-titel">{{ $title }}</div>
+		{{ $slot }}
+	</div>
+
+	Use:way:1 				##laravel 5.8
+	@component('component.alert')
+		@slot('title')
+			Alert title goes here.   
+		@endslot
+		<h2>Someting error for you.</h2>
+		<p>Error code: 403</p>
+	@endcomponent
+
+	Use:way:2 			##laravel 9.x
+	<x-alert>
+		
+		Something Erroro
+	</x-alert>
+	or
+	@component('components.alert')
+		Hey there
+	@endcomponent
+	
+
+Class-7
+
+1. Web template ke laravel project a convart
+2. git er bebohar	
